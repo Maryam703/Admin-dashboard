@@ -1,9 +1,8 @@
 import React from "react";
 import "./Orders.css";
-import Order from "../OrdersApi";
+import Order from "../Api/OrdersApi";
 
 export default function Orders() {
-  console.log(Order)
   return (
     <>
       <div className="order-container">
@@ -12,7 +11,7 @@ export default function Orders() {
         <button className="order-btn">Add Products</button>
         </div>
 
-        <table className="table">
+        <table>
                 <thead>
                 <tr>
                   <th>Order-Id</th>
@@ -32,7 +31,7 @@ export default function Orders() {
                   <td>{Order.id}</td>
                   <td>{Order.userName}</td>
                   <td>{Order.productName}</td>
-                  <td>{Order.image}</td>
+                  <td className="img-container"><img className="order-img" src="{Order.image}" alt="image"/></td>
                   <td>${Order.price}</td>
                   <td>{Order.quantity}</td>
                   <td>{Order.Adress}</td>

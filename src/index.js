@@ -10,6 +10,8 @@ import {
 } from "react-router-dom";
 import Dashboard from './components/Dashboard/Dashboard';
 import Orders from './components/Orders/Orders';
+import Product from './components/Product/Product';
+import Login from './components/Login/Login';
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -17,6 +19,8 @@ const router = createBrowserRouter(
     <Route path='/' element={<App/>}>
     <Route path='' element={<Dashboard /> }/>
     <Route path='Orders' element={<Orders/>}/>
+    <Route path='Product' element={<Product />}/>
+    <Route path='Login' element={<Login/>}/>
     </Route>
     </>
   )
