@@ -1,10 +1,10 @@
 import React from 'react'
 import "./Dashboard.css"
 
-export default function Home() {
+export default function Dashboard() {
   return (
     <div className='home-box'>
-      <p>Welcome to Dashboard</p>
+      <p>Hey Admin! Welcome to Dashboard</p>
     </div>
   )
 }

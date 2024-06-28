@@ -39,6 +39,58 @@ Instead, it will copy all the configuration files and the transitive dependencie
 
 You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
 
+### Structure Breakdown
+
+```text
+├── public/
+│   ├── images
+│   ├── favicon.ico
+│   ├── index.html
+│   ├── logo192.png
+│   ├── logo512.png
+│   ├── manifest.json
+│   └── robots.txt
+│
+├── src/
+│   ├── components/
+│   │   ├── Api/
+│   │   │   ├── OrdersApi.js
+│   │   │   └── ProductsApi.js
+│   │   │
+│   │   ├── Dashboard/
+│   │   │   ├── Dashboard.js
+│   │   │   └── Dashboard.css
+│   │   │
+│   │   ├── Login/
+│   │   │   ├── Login.js
+│   │   │   └── Login.css
+│   │   │
+│   │   ├── Orders/
+│   │   │   ├── Orders.js
+│   │   │   └── Orders.css
+│   │   │
+│   │   ├── Product/
+│   │   │   ├── Product.js
+│   │   │   └── Product.css
+│   │   │
+│   │   └── Sidebar/
+│   │       ├── Sidebar.js
+│   │       └── Sidebar.css
+│   │
+│   ├── App.css
+│   ├── App.js
+│   ├── App.test.js
+│   ├── index.css
+│   ├── index.js
+│   ├── logo.svg
+│   ├── reportWebVitals.js
+│   └── setupTests.js
+│      
+├── package-lock.json
+├── package.json
+└── README.md
+```
+
 ## Learn More
 
 You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).

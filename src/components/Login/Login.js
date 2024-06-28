@@ -13,6 +13,7 @@ export default function Login() {
   return (
     <div className="Login-container">
       <form onSubmit={Handelsubmit}>
+      <div className="logo">SAPPHIRE</div>
         <input
           type="text"
           className="input"
@@ -34,7 +35,7 @@ export default function Login() {
           value={password}
           onChange={(e) => setPassword(e.target.value)}
         />
-        <button>Login</button>
+        <button className="button">Login</button>
       </form>
     </div>
   );

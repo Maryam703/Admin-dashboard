@@ -7,7 +7,7 @@ export default function Sidebar() {
     <div className="sidebar">
       <div className="logo">SAPPHIRE</div>
       <div className="sidebar-options">
-        <Link to="/" className="options">
+        <Link to="Dashboard" className="options">
           <i className="icon fa-solid fa-clipboard"></i>
           <p className="para">DashBoard</p>
         </Link>
@@ -31,11 +31,7 @@ export default function Sidebar() {
           <i className="icon fa-solid fa-gear"></i>
           <p className="para">Setting</p>
         </Link>
-        <Link to="Login" className="options">
-          <i className="icon fa-solid fa-user"></i>
-          <p className="para">Login</p>
-        </Link>
-      </div>
+        </div>
     </div>
   );
 }

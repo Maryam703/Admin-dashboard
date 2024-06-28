@@ -1,13 +1,8 @@
-import { Outlet } from 'react-router-dom';
-import './App.css';
-import Sidebar from './components/Sidebar/Sidebar';
+import Admindashboard from './components/Admindashboard/Admindashboard';
 
 function App() {
   return (
-    <div className="container">
-     <div className='menu-bar'><Sidebar /></div>
-     <div className='main'><Outlet /></div>
-    </div>
+    <Admindashboard />
   );
 }
 

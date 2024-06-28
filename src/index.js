@@ -12,15 +12,18 @@ import Dashboard from './components/Dashboard/Dashboard';
 import Orders from './components/Orders/Orders';
 import Product from './components/Product/Product';
 import Login from './components/Login/Login';
+import Modal from './components/Modal/Modal';
+
 
 const router = createBrowserRouter(
   createRoutesFromElements(
     <>
+    <Route path='/Login' element={<Login />}/>
     <Route path='/' element={<App/>}>
-    <Route path='' element={<Dashboard /> }/>
-    <Route path='Orders' element={<Orders/>}/>
-    <Route path='Product' element={<Product />}/>
-    <Route path='Login' element={<Login/>}/>
+    <Route path='Dashboard' element={<Dashboard/>} />
+    <Route path='Orders' element={<Orders/>} />
+    <Route path='Product' element={<Product/>} />
+    <Route path='Modal' element={<Modal/>} />
     </Route>
     </>
   )

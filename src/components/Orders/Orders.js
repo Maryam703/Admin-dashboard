@@ -1,6 +1,7 @@
 import React from "react";
 import "./Orders.css";
 import Order from "../Api/OrdersApi";
+import { Link } from "react-router-dom";
 
 export default function Orders() {
   return (
@@ -8,14 +9,13 @@ export default function Orders() {
       <div className="order-container">
        <div className="order-header">
         <div className="order-heading">#Orders</div>
-        <button className="order-btn">Add Products</button>
+        <Link to="/Modal" className="order-btn">Add Products</Link>
         </div>
 
         <table>
                 <thead>
                 <tr>
                   <th>Order-Id</th>
-                  <th>User</th>
                   <th>Product</th>
                   <th>image</th>
                   <th>price</th>
@@ -24,18 +24,17 @@ export default function Orders() {
                   <th>Status</th>
                 </tr>
                 </thead>
-        {Order.map((Order) => {
+        {Order.map((item) => {
           return (
                 <tbody>
                 <tr>
-                  <td>{Order.id}</td>
-                  <td>{Order.userName}</td>
-                  <td>{Order.productName}</td>
-                  <td className="img-container"><img className="order-img" src="{Order.image}" alt="image"/></td>
-                  <td>${Order.price}</td>
-                  <td>{Order.quantity}</td>
-                  <td>{Order.Adress}</td>
-                  <td>#{Order.status}</td>
+                  <td>#{item.id}</td>
+                  <td>{item.productName}</td>
+                  <td className="img-container"><img className="order-img" src={item.image} alt={item.name}/></td>
+                  <td>${item.price}</td>
+                  <td>{item.quantity}</td>
+                  <td>{item.Adress}</td>
+                  <td>#{item.status}</td>
                 </tr>
                 </tbody>
               

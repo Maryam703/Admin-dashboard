@@ -19,9 +19,9 @@ export default function Product() {
         {Products.map((item) => {
             return(
                 <tbody>
-                    <td>{item.id}</td>
+                    <td>#{item.id}</td>
                     <td>{item.name}</td>
-                    <td className="img-container"><img className="order-img" src="{Order.image}" alt="image"/></td>
+                    <td className="img-container"><img className="order-img" src={item.image} alt={item.name}/></td>
                     <td>${item.price}</td>
                     <td>{item.quantity}</td>
                 </tbody>
