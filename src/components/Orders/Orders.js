@@ -1,7 +1,6 @@
 import React from "react";
 import "./Orders.css";
 import Order from "../Api/OrdersApi";
-import { Link } from "react-router-dom";
 
 export default function Orders() {
   return (
@@ -9,7 +8,6 @@ export default function Orders() {
       <div className="order-container">
        <div className="order-header">
         <div className="order-heading">#Orders</div>
-        <Link to="/Modal" className="order-btn">Add Products</Link>
         </div>
 
         <table>
