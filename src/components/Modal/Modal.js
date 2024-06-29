@@ -16,6 +16,7 @@ export default function Modal({ closeModal, productEditabe }) {
     if (productEditabe) {
       setId(productEditabe.id);
       setName(productEditabe.name);
+      setImage(productEditabe.image)
       setPrice(productEditabe.price);
       setQuantity(productEditabe.quantity);
     }
@@ -60,7 +61,7 @@ export default function Modal({ closeModal, productEditabe }) {
         <button onClick={closeModal} className="cross-box">
           <i class="cross-btn fa-solid fa-xmark"></i>
         </button>
-        <div className="heading">#Add Items</div>
+        <div className="heading">{productEditabe? "Edit Item" : "Add Item"}</div>
         <div className="input-box">
           <div className="lable">
             <label>Product Name:</label>
@@ -95,6 +96,7 @@ export default function Modal({ closeModal, productEditabe }) {
             type="url"
             name="image"
             required
+            placeholder="Enter URL"
             value={image}
             onChange={(e) => setImage(e.target.value)}
           />
@@ -107,7 +109,7 @@ export default function Modal({ closeModal, productEditabe }) {
             type="number"
             name="price"
             required
-            placeholder="0.00"
+            placeholder="$0.00"
             value={price}
             onChange={(e) => setPrice(e.target.value)}
           />
@@ -120,7 +122,7 @@ export default function Modal({ closeModal, productEditabe }) {
             type="number"
             name="quantity"
             required
-            placeholder="1.0"
+            placeholder="1"
             value={quantity}
             onChange={(e) => setQuantity(e.target.value)}
           />

@@ -2,6 +2,8 @@
     width: 100%;
     height: auto;
     background-color: whitesmoke;
+    margin: 20px;
+
 }
 .product-header{
     display: flex;
@@ -36,49 +38,4 @@
 .product-btn:hover{
     background-color: rgb(231, 79, 52);
     font-weight: 500;
-}
-table {
-    width: 100%;
-    text-align: left;
-    padding: 10px;
-    margin-top: 30px;
-    margin-left: 30px;
-    cursor: pointer;
-}
-thead {
-    height: 45px;
-}
-tbody{
-    height: auto;
-}
-th{
-    font-size: 20px;
-    text-align: left;
-    padding: 10px;
-}
-td{
-    height: 35px;
-    font-size: 18px;
-    text-align: left;
-    padding: 10px;
-}
-.product-img{
-    height:100%;
-    width: 100%;
-    object-fit: contain;
-}
-.img-container{
-    height: 55px;
-    width: 55px;
-}
-.edit-btn{
-    width: 80px;
-    height: 25px;
-    background-color: green;
-    border: none;
-    color: whitesmoke;
-    border-radius: 4px;
-}
-.edit-btn:hover{
-    background-color: rgb(2, 100, 2);
 }

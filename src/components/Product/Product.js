@@ -2,10 +2,22 @@ import React, { useState } from "react";
 import Products from "../Api/ProductsApi";
 import "./Product.css";
 import Modal from "../Modal/Modal";
+import Table from "../Table/Table";
 
 export default function Product() {
   const [openModal, setOpenModal] = useState(false);
   const [productEditabe, setProductEditabe] = useState({});
+  const TableHeadings = [
+    "Id",
+    "ProductName",
+    "Image",
+    "price",
+    "quantity",
+    "Adress",
+    "Status",
+  ];
+  TableHeadings.splice(5, 2);
+  const TableData = [...Products];
 
   const OpenModal = () => {
     setOpenModal(true);
@@ -30,39 +42,12 @@ export default function Product() {
           Add Products
         </button>
       </div>
-      <table>
-        <thead>
-          <th>Product-Id</th>
-          <th>Name</th>
-          <th>Image</th>
-          <th>Price</th>
-          <th>Quantity</th>
-          <th>Edit Details</th>
-        </thead>
-        {Products.map((item) => {
-          return (
-            <tbody>
-              <tr key={item.id}>
-                <td>#{item.id}</td>
-                <td>{item.name}</td>
-                <td className="img-container">
-                  <img className="order-img" src={item.image} alt={item.name} />
-                </td>
-                <td>${item.price}</td>
-                <td>{item.quantity}</td>
-                <td>
-                  <button
-                    className="edit-btn"
-                    onClick={() => Editdetails(item)}
-                  >
-                    Edit
-                  </button>
-                </td>
-              </tr>
-            </tbody>
-          );
-        })}
-      </table>
+      <Table
+        TableHeadings={TableHeadings}
+        TableData={TableData}
+        showEditBtn={true}
+        Editdetails={Editdetails}
+      />
       {openModal && (
         <Modal closeModal={CloseModal} productEditabe={productEditabe} />
       )}

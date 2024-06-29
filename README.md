@@ -43,7 +43,6 @@ You don't have to ever use `eject`. The curated feature set is suitable for smal
 
 ```text
 ├── public/
-│   ├── images
 │   ├── favicon.ico
 │   ├── index.html
 │   ├── logo192.png
@@ -56,6 +55,14 @@ You don't have to ever use `eject`. The curated feature set is suitable for smal
 │   │   ├── Api/
 │   │   │   ├── OrdersApi.js
 │   │   │   └── ProductsApi.js
+│   │   │
+│   │   ├── Modal/
+│   │   │   ├── Modal.js
+│   │   │   └── Modal.css
+│   │   │
+│   │   ├── Admindashboard/
+│   │   │   ├── Admindashboard.js
+│   │   │   └── Admindashboard.css
 │   │   │
 │   │   ├── Dashboard/
 │   │   │   ├── Dashboard.js
