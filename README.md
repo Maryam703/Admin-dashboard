@@ -52,17 +52,13 @@ You don't have to ever use `eject`. The curated feature set is suitable for smal
 │
 ├── src/
 │   ├── components/
-│   │   ├── Api/
-│   │   │   ├── OrdersApi.js
-│   │   │   └── ProductsApi.js
-│   │   │
-│   │   ├── Modal/
-│   │   │   ├── Modal.js
-│   │   │   └── Modal.css
-│   │   │
 │   │   ├── Admindashboard/
 │   │   │   ├── Admindashboard.js
 │   │   │   └── Admindashboard.css
+│   │   │
+│   │   ├── Api/
+│   │   │   ├── OrdersApi.js
+│   │   │   └── ProductsApi.js
 │   │   │
 │   │   ├── Dashboard/
 │   │   │   ├── Dashboard.js
@@ -72,6 +68,10 @@ You don't have to ever use `eject`. The curated feature set is suitable for smal
 │   │   │   ├── Login.js
 │   │   │   └── Login.css
 │   │   │
+│   │   ├── Modal/
+│   │   │   ├── Modal.js
+│   │   │   └── Modal.css
+│   │   │
 │   │   ├── Orders/
 │   │   │   ├── Orders.js
 │   │   │   └── Orders.css
@@ -80,9 +80,13 @@ You don't have to ever use `eject`. The curated feature set is suitable for smal
 │   │   │   ├── Product.js
 │   │   │   └── Product.css
 │   │   │
-│   │   └── Sidebar/
-│   │       ├── Sidebar.js
-│   │       └── Sidebar.css
+│   │   ├── Sidebar/
+│   │   │   ├── Sidebar.js
+│   │   │   └── Sidebar.css
+│   │   │
+│   │   └── Table/
+│   │       ├── Table.js
+│   │       └── Table.css
 │   │
 │   ├── App.css
 │   ├── App.js

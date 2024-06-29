@@ -6,31 +6,23 @@ import Table from "../Table/Table";
 
 export default function Product() {
   const [openModal, setOpenModal] = useState(false);
-  const [productEditabe, setProductEditabe] = useState({});
-  const TableHeadings = [
-    "Id",
-    "ProductName",
-    "Image",
-    "price",
-    "quantity",
-    "Adress",
-    "Status",
-  ];
-  TableHeadings.splice(5, 2);
+  const [productEditable, setProductEditable] = useState(null);
+  const TableHeadings = ["Id", "ProductName", "Image", "price", "quantity"];
   const TableData = [...Products];
 
   const OpenModal = () => {
     setOpenModal(true);
-    setProductEditabe(null);
+    setProductEditable(null);
   };
 
   const CloseModal = () => {
     setOpenModal(false);
-    setProductEditabe(null);
+    setProductEditable(null);
   };
 
   const Editdetails = (item) => {
-    setProductEditabe(item);
+    console.log(item);
+    setProductEditable(item);
     setOpenModal(true);
   };
 
@@ -49,7 +41,7 @@ export default function Product() {
         Editdetails={Editdetails}
       />
       {openModal && (
-        <Modal closeModal={CloseModal} productEditabe={productEditabe} />
+        <Modal closeModal={CloseModal} productEditable={productEditable} />
       )}
     </div>
   );

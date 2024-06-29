@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import "./Login.css"
+import "./Login.css";
 
 export default function Login() {
   const [name, setName] = useState("");
@@ -7,13 +7,13 @@ export default function Login() {
   const [password, setPassword] = useState("");
 
   const Handelsubmit = (e) => {
-  e.preventDefault();
-  }
+    e.preventDefault();
+  };
 
   return (
     <div className="Login-container">
       <form onSubmit={Handelsubmit}>
-      <div className="logo">SAPPHIRE</div>
+        <div className="logo">SAPPHIRE</div>
         <input
           type="text"
           className="input"

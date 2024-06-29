@@ -5,7 +5,7 @@ import Products from "../Api/ProductsApi";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
-export default function Modal({ closeModal, productEditabe }) {
+export default function Modal({ closeModal, productEditable }) {
   const [name, setName] = useState("");
   const [id, setId] = useState();
   const [price, setPrice] = useState();
@@ -13,14 +13,14 @@ export default function Modal({ closeModal, productEditabe }) {
   const [image, setImage] = useState(null);
 
   useEffect(() => {
-    if (productEditabe) {
-      setId(productEditabe.id);
-      setName(productEditabe.name);
-      setImage(productEditabe.image)
-      setPrice(productEditabe.price);
-      setQuantity(productEditabe.quantity);
+    if (productEditable) {
+      setId(productEditable.id);
+      setName(productEditable.productName);
+      setImage(productEditable.image);
+      setPrice(productEditable.price);
+      setQuantity(productEditable.quantity);
     }
-  }, [productEditabe]);
+  }, [productEditable]);
 
   const HandleForm = (e) => {
     e.preventDefault();
@@ -38,19 +38,19 @@ export default function Modal({ closeModal, productEditabe }) {
 
     const data = {
       id: id,
-      name: name,
+      productName: name,
       image: image,
       price: price,
       quantity: quantity,
     };
 
-    if (productEditabe) {
-      Products.map((item) => (item.id === productEditabe.id ? data : item));
+    if (productEditable) {
+      Products.map((item) => (item.id === productEditable.id ? data : item));
       Products.splice(0, 1, data);
       closeModal();
     }
 
-    if (!productEditabe) {
+    if (!productEditable) {
       Products.push(data);
       closeModal();
     }
@@ -61,7 +61,9 @@ export default function Modal({ closeModal, productEditabe }) {
         <button onClick={closeModal} className="cross-box">
           <i class="cross-btn fa-solid fa-xmark"></i>
         </button>
-        <div className="heading">{productEditabe? "Edit Item" : "Add Item"}</div>
+        <div className="heading">
+          {productEditable ? "Edit Item" : "Add Item"}
+        </div>
         <div className="input-box">
           <div className="lable">
             <label>Product Name:</label>
@@ -129,7 +131,7 @@ export default function Modal({ closeModal, productEditabe }) {
         </div>
         <div className="modal-btn">
           <button className="button" type="submit">
-            {productEditabe ? "UpdateProduct" : "Add Product"}
+            {productEditable ? "UpdateProduct" : "Add Product"}
           </button>
           <ToastContainer
             position="top-right"

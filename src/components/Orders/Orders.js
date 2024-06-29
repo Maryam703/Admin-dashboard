@@ -10,7 +10,7 @@ export default function Orders() {
     "Image",
     "Price",
     "Quantity",
-    " Adress",
+    "Adress",
     "Status",
   ];
   const TableData = [...Order];

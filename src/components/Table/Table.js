@@ -11,16 +11,9 @@ export default function Table({
     <div>
       <table>
         <thead>
-          <tr>
-            <th>{TableHeadings[0]}</th>
-            <th>{TableHeadings[1]}</th>
-            <th>{TableHeadings[2]}</th>
-            <th>{TableHeadings[3]}</th>
-            <th>{TableHeadings[4]}</th>
-            <th>{TableHeadings[5]}</th>
-            <th>{TableHeadings[6]}</th>
-            <th>{TableHeadings[7]}</th>
-          </tr>
+          {TableHeadings.map((item) => (
+            <th>{item}</th>
+          ))}
         </thead>
         <tbody>
           {TableData.map((item) => {
@@ -38,9 +31,12 @@ export default function Table({
                 <td>{item.edit}</td>
                 {showEditBtn && (
                   <td>
-                    <button className="edit-btn" onClick={Editdetails}>
+                    <button
+                      className="edit-btn"
+                      onClick={() => Editdetails(item)}
+                    >
                       Edit
-                    </button>{" "}
+                    </button>
                   </td>
                 )}
               </tr>

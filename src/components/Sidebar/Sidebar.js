@@ -31,7 +31,7 @@ export default function Sidebar() {
           <i className="icon fa-solid fa-gear"></i>
           <p className="para">Setting</p>
         </Link>
-        </div>
+      </div>
     </div>
   );
 }
