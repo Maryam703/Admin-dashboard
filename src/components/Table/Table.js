@@ -51,9 +51,10 @@ export default function Table({
                     >
                       <option value={item.status}>{item.status}</option>
                       <option value="dispatched">Dispatched</option>
-                      <option value="recieved">Recieved</option>
                       <option value="returned">Returned</option>
                       <option value="cancelled">Cancelled</option>
+                      <option value="delivered">Delivered</option>
+                      <option value="complete">Complete</option>
                     </select>
                   </td>
                 )}
