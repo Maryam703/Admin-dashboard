@@ -56,10 +56,6 @@ You don't have to ever use `eject`. The curated feature set is suitable for smal
 │   │   │   ├── Admindashboard.js
 │   │   │   └── Admindashboard.css
 │   │   │
-│   │   ├── Api/
-│   │   │   ├── OrdersApi.js
-│   │   │   └── ProductsApi.js
-│   │   │
 │   │   ├── Dashboard/
 │   │   │   ├── Dashboard.js
 │   │   │   └── Dashboard.css
@@ -80,6 +76,9 @@ You don't have to ever use `eject`. The curated feature set is suitable for smal
 │   │   │   ├── Product.js
 │   │   │   └── Product.css
 │   │   │
+│   │   ├── ProtectedRoutes/
+│   │   │   └── ProtectedRoutesForAdmin.js
+│   │   │
 │   │   ├── Sidebar/
 │   │   │   ├── Sidebar.js
 │   │   │   └── Sidebar.css
@@ -87,6 +86,9 @@ You don't have to ever use `eject`. The curated feature set is suitable for smal
 │   │   └── Table/
 │   │       ├── Table.js
 │   │       └── Table.css
+│   │
+│   ├── Config/
+│   │   └── FirebaseConfig.js
 │   │
 │   ├── App.css
 │   ├── App.js

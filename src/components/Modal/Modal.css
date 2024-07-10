@@ -62,6 +62,12 @@ input{
     width: 400px;
     border-radius: 4px;
 }
+select{
+    width: 408px;
+    border-radius: 4px;
+    height: 41px;
+    
+}
 .modal-btn{
     height: 80px;
     width: 90%;
@@ -83,4 +89,9 @@ input{
 .button:hover{
     background-color: rgb(231, 79, 52);
     font-weight: 500;
+}
+.input-img{
+    height: 15px;
+    width: 15px;
+    background-color: black;
 }

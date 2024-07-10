@@ -1,3 +1,7 @@
+Link{
+    text-decoration: none;
+    width: 100%;
+}
 table {
     width: 100%;
     text-align: left;
@@ -39,6 +43,29 @@ td{
     border: none;
     color: whitesmoke;
     border-radius: 4px;
+    font-size: 12px;
+}
+.status-btn{
+    width: 94px;
+    height: 25px;
+    background-color: green;
+    border: none;
+    color: whitesmoke;
+    border-radius: 4px;
+    font-size: 12px;
+}
+.d-btn{
+    width: 80px;
+    height: 25px;
+    background-color: green;
+    border: none;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    color: whitesmoke;
+    font-size: 12px;
 }
 .edit-btn:hover{
     background-color: rgb(2, 100, 2);

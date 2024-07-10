@@ -14,6 +14,8 @@ import Orders from "./components/Orders/Orders";
 import Product from "./components/Product/Product";
 import Login from "./components/Login/Login";
 import Modal from "./components/Modal/Modal";
+import ProtectedRoutesForAdmin from "./components/ProtectedRoutes/ProtectedRoutesForAdmin";
+import OrderDetails from "./components/OrderDetail/OrderDetails";
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -21,10 +23,32 @@ const router = createBrowserRouter(
       <Route path="/Login" element={<Login />} />
       <Route path="/" element={<App />}>
         <Route path="" element={<Navigate to="/Dashboard" />} />
-        <Route path="Dashboard" element={<Dashboard />} />
-        <Route path="Orders" element={<Orders />} />
-        <Route path="Product" element={<Product />} />
+        <Route
+          path="Dashboard"
+          element={
+            <ProtectedRoutesForAdmin>
+              <Dashboard />
+            </ProtectedRoutesForAdmin>
+          }
+        />
+        <Route
+          path="Orders"
+          element={
+            <ProtectedRoutesForAdmin>
+              <Orders />
+            </ProtectedRoutesForAdmin>
+          }
+        />
+        <Route
+          path="Product"
+          element={
+            <ProtectedRoutesForAdmin>
+              <Product />
+            </ProtectedRoutesForAdmin>
+          }
+        />
         <Route path="Modal" element={<Modal />} />
+        <Route path="/OrderDetails/:id" element={<OrderDetails/>} />
       </Route>
     </>
   )
